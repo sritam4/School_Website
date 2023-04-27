@@ -1,0 +1,461 @@
+body{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgb(255, 255, 255); */
+    
+}
+
+.menubar{
+    height: 80px;
+    background-color: rgba(178, 92, 12, 0.953);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    /* padding-right:10px; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 200;
+ 
+}
+
+.menu{
+    display: flex;
+    flex: 1;
+    /* padding: 3px; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(23, 37, 37);
+
+
+}
+.menu:hover{
+    background-color: rgba(226, 204, 148, 0.238);
+    margin: 2px;
+    padding: 31px 0px;  
+    
+}
+.menu:active{
+    background-color: rgba(149, 76, 8, 0.855);
+}
+
+.logo{
+    width: 250px;
+    height: 80px;
+    padding-left: 20px;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+}
+.hamburger-logo{
+    margin-right: 35px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+/*-------------------------------------------------------------Contents starts from here--------------------------------------------------*/
+
+.content{
+    padding-top: 85px;
+}
+
+.themediv{
+    /* height: 700px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    margin-bottom: 20px;
+    
+}
+.imagebox,.textbox{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: rgba(5, 8, 34, 0.889); */
+
+}
+
+
+.textbox{
+    background-image: url(images/education.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.filter{
+    background: rgba(0, 0, 0, 0.504);
+    position: absolute;
+    backdrop-filter: blur(5px);
+    height: 98%;
+    width: 99%;
+}
+
+.toptext{
+    z-index: 100;
+    position: absolute;
+    color: rgba(255, 253, 253, 0.744);
+    font-weight: bold;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*------------------------------------------------------Grid boxes Info starts here------------------------------------------------*/
+
+.background{
+    background-image: url(images/children-876543_960_720.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 700px;
+    width: 85%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 3px;
+    
+}
+
+.infos{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 100;    
+    
+}
+.notice-and-opening{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.infobox-director-principal{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.boxes{
+    height: 180px;
+    margin: 10px;
+    display: flex;
+    border: solid rgba(159, 75, 35, 0.821) 3px;
+    border-radius: 8px;
+    color: rgba(196, 224, 238, 0.823);
+    font-weight: bold;
+    /* text-decoration: underline; */
+    padding: 10px;
+    background-color: rgba(35, 35, 35, 0.289);
+    transition: 0.2s;
+    overflow: hidden;
+    justify-content: start;
+    flex-direction: column;
+
+    
+}
+.boxes:hover{
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.684);
+    background-color: rgba(206, 209, 212, 0.471);
+    color: black;
+
+}
+
+.noticebox{
+    height: 410px;
+    overflow-y: scroll;
+}
+.openingbox{
+    /* height: 45%; */
+}
+.div-head{
+    text-align:center;
+    text-decoration: underline;
+    font-size: 24px;
+
+}
+.div-content{
+    font-size: 18px;
+    padding: 10px;
+    /* margin-top: 10px; */
+    /* overflow: scroll; */
+
+}
+
+/* --------------------------------------------------------------status box start here-------------------------------------------*/
+
+.outer-div{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: rgba(78, 23, 0, 0.921);
+
+}
+.our-status{
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+
+}
+
+.statusbox{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin: 17px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(190, 147, 91, 0.766);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+.statusbox:hover{
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.466);
+    background-color: rgb(230, 198, 159);
+}
+.numbers{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: rgb(23, 37, 37);
+    text-align: center;
+}
+/*------------------------------------------------footer start here---------------------------------*/
+.footer{
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.859);
+    width: 97%;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 4px;
+
+}
+.link-box{
+    height: 30px;
+    border: solid white 1px;
+    margin: 10px;
+    margin-bottom: 60px;
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.3s;
+    
+}
+.link-box:hover{
+    width: 78%;
+}
+.links{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: 20px;
+    margin: 15px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.links:hover{
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.detail-box{
+    display: flex;
+    flex-direction: row;
+    /* border: solid white; */
+    height: 300px;
+    width: 90%;
+    margin-top: 15px;
+    justify-content: space-around;
+
+    /* margin: 30px; */
+    padding: 20px;
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    /* border: solid red 1px; */
+    align-items: center;
+    height: 200px;
+    width: 30%;
+    padding: 30px;
+}
+.name{
+    font-size: 28px;
+    margin-bottom: 0px;
+    /* border: solid yellow; */
+    text-align: center;
+    width: 100%;
+}
+.contact-info{
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    /* border: solid blue; */
+}
+.email{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 15px;
+    text-align: center;
+    /* border: solid green; */
+    width: 100%;
+    color: rgba(255, 255, 255, 0.607);
+}
+.copyright{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.607);
+    font-size: 14px;
+}
+
+.map-box{
+    /* border: solid red 2px; */
+    height: 280px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:850px) {
+    body{
+        padding: 0px 20px;
+    }
+    .menubar{
+        height: 60px;
+    }
+    .hamburger-logo{
+        display: block;
+    }
+    .menu,.map-box,.link-box{
+        display: none;
+    }
+    .logo{
+        width: fit-content;
+    }
+    .logoimg{
+        height: 60px;
+    }
+    .themediv{
+        grid-template-columns: 1fr;
+    }
+    .imagebox,.textbox{
+        margin: 10px 0px;
+        height: 300px;
+    }
+    /*---------------------------------middle section-- */
+    
+    .detail-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .background{
+        height: 740px;
+    }
+    .infos{
+        display: flex;
+        flex-direction: column;
+        /* align-items: stretch; */
+    }
+    .boxes{
+        height: 120px;
+        margin: 10px;
+    }
+  
+    .div-content{
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 24px;
+    }
+    .noticebox,.openingbox{
+        height: 200px;
+        width: 44%;
+        display: inline-block;
+
+    }
+    .notice-and-opening{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .infobox-director-principal{
+        width: 100%;
+    }
+/* ----------------------------------------------------Footer */
+    .footer{
+        height: 300px;
+        width: 93%;
+    }
+    .contact-box{
+        padding: 0px;
+        width: 100%;
+    }
+
+}
+
+
+@media(min-width:851px) and (max-width:1049px) {
+    .home,.events,.ach{
+        display: none;
+    }
+    .logo{
+        width: fit-content;
+    }
+    .hamburger-logo{
+        margin-right: 20px;
+        display: block;
+    }
+
+}
+
+
+@media(min-width:1050px) and (max-width: 1160px){
+    .logo{
+        width: fit-content;
+    }
+    .home{
+        display: none;
+    }
+}
