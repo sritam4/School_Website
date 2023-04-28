@@ -182,9 +182,9 @@ body{
     height: 410px;
     overflow-y: scroll;
 }
-.openingbox{
-    /* height: 45%; */
-}
+/* .openingbox{
+    height: 45%;
+} */
 .div-head{
     text-align:center;
     text-decoration: underline;
@@ -194,6 +194,7 @@ body{
 .div-content{
     font-size: 18px;
     padding: 10px;
+    height: 100%;
     /* margin-top: 10px; */
     /* overflow: scroll; */
 
@@ -220,7 +221,7 @@ body{
 .our-status{
     display: flex;
     flex-direction: row;
-    align-self: stretch;
+    /* align-self: stretch; */
     align-items: center;
     justify-content: space-around;
     font-weight: bold;
@@ -230,7 +231,8 @@ body{
 .statusbox{
     display: flex;
     flex-direction: column;
-    flex:1;
+    /* flex:1; */
+    width: 30%;
     margin: 17px;
     height: 200px;
     align-items: center;
@@ -410,11 +412,9 @@ body{
     .noticebox,.openingbox{
         height: 200px;
         width: 44%;
-        display: inline-block;
-
+       
     }
     .notice-and-opening{
-        display: flex;
         width: 100%;
         height: max-content;
         flex-direction: row;
@@ -422,6 +422,20 @@ body{
     }
     .infobox-director-principal{
         width: 100%;
+    }
+
+    /* -------------------------------------status box------------ */
+    .outer-div{
+        height: fit-content;
+    }
+    .numbers{
+        font-size: 36px;
+    }
+    .statusbox{
+        font-size: 16px;
+    }
+    .headline{
+        font-size: 34px;
     }
 /* ----------------------------------------------------Footer */
     .footer{
@@ -433,6 +447,29 @@ body{
         width: 100%;
     }
 
+    @media  (max-width: 500px) {
+        .statusbox{
+            height: 150px;
+        }
+        .boxes{
+            line-height: 5px;
+        }
+        .div-head{
+            font-size: 20px;
+        }
+        .div-content{
+            font-size: 15px;
+            text-align: justify;
+        }
+        .background{
+            width: 100%;
+        }
+        
+        .statusbox{
+            height: 150px;
+        }
+        
+    }
 }
 
 
