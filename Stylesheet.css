@@ -1,5 +1,6 @@
 body{
-    padding: 15px;
+    /* padding: 0px; */
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: rgb(255, 255, 255); */
     
@@ -49,24 +50,50 @@ body{
 .logo{
     width: 250px;
     height: 80px;
-    padding-left: 20px;
+    padding-left: 10px;
     /* background-color: aliceblue; */
     display: flex;
     align-items: center;
 }
 .hamburger-logo{
-    margin-right: 35px;
+    margin-right: 15px;
     display: none;
     cursor: pointer;
+    position: relative;
+}
+.hamburger-logo:hover{
+    .sidemenu{
+        display: block;
+    }
+}
+.sidemenu{
+    background-color: rgba(194, 162, 117, 0.533);
+    padding: 5px 0px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    display: none;
 }
 
+.sidemenu p{
+    color: rgb(23, 37, 37);
+    font-size: 18px;
+    padding: 20px;
+    margin: 0;
+    line-height: 0;
+    transition: .3s;
+    font-weight: bold;
+}
+.sidemenu p:hover{
+    background-color: rgb(223, 136, 6);
+}
 
 
 
 /*-------------------------------------------------------------Contents starts from here--------------------------------------------------*/
 
 .content{
-    padding-top: 85px;
+    padding-top: 75px;
 }
 
 .themediv{
@@ -76,6 +103,11 @@ body{
     column-gap: 5px;
     margin-bottom: 20px;
     
+}
+.imagebox{
+    background-image: url("images/children-7339441_960_720.jpg");
+    background-size: cover;
+    background-position: center;
 }
 .imagebox,.textbox{
     height: 500px;
@@ -100,8 +132,8 @@ body{
     background: rgba(0, 0, 0, 0.504);
     position: absolute;
     backdrop-filter: blur(5px);
-    height: 98%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
 }
 
 .toptext{
@@ -123,15 +155,15 @@ body{
     background-size: cover;
     position: relative;
     height: 700px;
-    width: 85%;
+    width: 90%;
     margin: auto;
-    padding: 8px;
+    /* padding: 8px; */
     border-radius: 3px;
     
 }
 
 .infos{
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -180,7 +212,11 @@ body{
 
 .noticebox{
     height: 410px;
-    overflow-y: scroll;
+    overflow-y: none;
+}
+#marquee{
+    height: 100%;
+
 }
 /* .openingbox{
     height: 45%;
@@ -193,8 +229,9 @@ body{
 }
 .div-content{
     font-size: 18px;
-    padding: 10px;
+    padding-top: 10px;
     height: 100%;
+    font-weight: normal;
     /* margin-top: 10px; */
     /* overflow: scroll; */
 
@@ -233,7 +270,8 @@ body{
     flex-direction: column;
     /* flex:1; */
     width: 30%;
-    margin: 17px;
+    min-width: 80px;
+    margin: 7px;
     height: 200px;
     align-items: center;
     justify-content: center;
@@ -257,9 +295,10 @@ body{
 .footer{
     height: 500px;
     background-color: rgba(0, 0, 0, 0.859);
-    width: 97%;
+    width: 100%;
+    margin: 2px;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,12 +344,12 @@ body{
     flex-direction: row;
     /* border: solid white; */
     height: 300px;
-    width: 90%;
+    width: 100%;
     margin-top: 15px;
     justify-content: space-around;
 
     /* margin: 30px; */
-    padding: 20px;
+    /* padding: 20px; */
 }
 .contact-box{
     display: flex;
@@ -358,9 +397,10 @@ body{
     align-items: center;
 }
 
-@media (max-width:850px) {
+/*---------------------------------------- responsiveness */
+@media (max-width:849px) {
     body{
-        padding: 0px 20px;
+        padding: 0px 0px;
     }
     .menubar{
         height: 60px;
@@ -378,10 +418,10 @@ body{
         height: 60px;
     }
     .themediv{
+        padding: 0;
         grid-template-columns: 1fr;
     }
     .imagebox,.textbox{
-        margin: 10px 0px;
         height: 300px;
     }
     /*---------------------------------middle section-- */
@@ -393,6 +433,7 @@ body{
     
     .background{
         height: 740px;
+        width: 100%;
     }
     .infos{
         display: flex;
@@ -440,16 +481,26 @@ body{
 /* ----------------------------------------------------Footer */
     .footer{
         height: 300px;
-        width: 93%;
+        width: 100%;
     }
     .contact-box{
         padding: 0px;
         width: 100%;
     }
+    .contact-info{
+        margin: 0px;
+    }
 
     @media  (max-width: 500px) {
+        .headline{
+            font-size: 25px;
+        }
         .statusbox{
             height: 150px;
+            font-size: 12px;
+        }
+        .numbers{
+            font-size: 25px;
         }
         .boxes{
             line-height: 5px;
@@ -463,10 +514,6 @@ body{
         }
         .background{
             width: 100%;
-        }
-        
-        .statusbox{
-            height: 150px;
         }
         
     }
